@@ -104,3 +104,57 @@ console.log(firstContainer.classList)
 let container2 = document.querySelector(".container2")
 
 container2.classList.add("light")
+
+
+
+// !  how to create element 
+
+
+let div = document.createElement("div")
+
+div.classList.add("dark")
+
+container2.before(div)
+
+let button = document.createElement('button')
+button.innerText= "click me"
+firstContainer.prepend(button)
+
+
+
+// !  fetch 
+
+
+let getData = async()=>{
+    // let ol = document.querySelector(".user")
+
+    let users = document.querySelector(".users")
+
+    try{
+
+        let response =await fetch("https://fakestoreapi.com/products")
+         let data    = await  response.json()
+
+         data.map((ele)=>{
+            // console.log(ele.title)
+
+             let div = document.createElement("div")
+
+             div.classList.add("card")
+
+             users.append(div)
+
+             div.innerHTML = `<img src=${ele.image} alt="">
+                                <h2> title : ${ele.title.slice(0,10)}</h2>
+                                <h3> rating : ${ele.rating.rate}</h3>
+             `
+         })
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+   
+}
+
+getData()
