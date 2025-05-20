@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .card1{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+           
+        }
+        .card2{
+            height: 200px;
+            width: 200px;
+            background-color: green;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 5px;
+        }
+
+
+        form{
+            height: 200px;
+            width: 250px;
+            border: 3px solid #ccc;
+            padding: 10px 20px;
+        }
+
+       form > input{
+            display: block;
+            margin-bottom: 4px;
+            width: 100%;
+        }
+       
+    </style>
+
+</head>
+<body>
+    
+   <h1 id="h1"> event</h1>
+
+   <button onclick="add()">click</button>
+
+   <div class="card1" onmouseover="changeColor()" onmouseleave="changeColor2()">
+    <h2> event handler</h2>
+
+   </div>
+
+
+   <div class="card2">
+
+    <h2> event listener</h2>
+
+   </div>
+
+    <input type="text" id="uName" placeholder="enter your name">
+
+    <h2 id="display"></h2>
+
+
+    <button id="btn" onclick="createDiv()"> hello</button>
+    <button id="btn2" onclick="createDiv()"> hi</button>
+
+
+    <form action="">
+
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+
+        <button> add</button>
+    </form>
+
+
+
+   <script src="./event.js"></script>
+
+</body>
+</html>
